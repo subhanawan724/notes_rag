@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+pandas
+langchain-chroma
+huggingface_hub
+tavily-python
