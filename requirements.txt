@@ -4,3 +4,4 @@ pandas
 langchain-chroma
 huggingface_hub
 tavily-python
+langgraph
