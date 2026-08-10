@@ -8,12 +8,12 @@ from pathlib import Path
 from pydantic import BaseModel
 import os
 
-# --- NAYA ---
+
 from langgraph.graph import StateGraph, END
 from langgraph.checkpoint.memory import MemorySaver
 from typing import TypedDict, Annotated
 import operator
-# --- NAYA khatam ---
+
 
 class HFInferenceEmbeddings:
     def __init__(self, api_token, model_name="sentence-transformers/all-MiniLM-L6-v2"):
@@ -28,7 +28,7 @@ class HFInferenceEmbeddings:
 embeddings = HFInferenceEmbeddings(api_token=os.environ["HF_API_TOKEN"])
 
 db = Chroma(
-    persist_directory=r"D:\Courses_lectures\data\notes_vector_db",
+    persist_directory="data/notes_vector_db",
     embedding_function=embeddings,
 )
 
@@ -38,9 +38,7 @@ tavily = TavilyClient(api_key=os.environ["TAVILY_API_KEY"])
 
 SCORE_THRESHOLD = 1.2
 
-# ============================================================
-# NAYA — LangGraph state, nodes, aur wiring
-# ============================================================
+
 
 class AgentState(TypedDict):
     question: str
@@ -138,9 +136,7 @@ graph = builder.compile(checkpointer=memory)
 # Filhal single, shared conversation — sabhi users isi thread mein
 THREAD = {"configurable": {"thread_id": "default"}}
 
-# ============================================================
-# App / endpoint — updated
-# ============================================================
+
 
 app = FastAPI()
 
