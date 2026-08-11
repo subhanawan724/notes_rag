@@ -143,11 +143,13 @@ app = FastAPI()
 
 class QueryModel(BaseModel):
     user_query: str
+    thread_id: str
 
 
 @app.post("/question")
 def question(data: QueryModel):
-    result = graph.invoke({"question": data.user_query}, THREAD)
+    thread = {"configurable": {"thread_id": data.thread_id}}
+    result = graph.invoke({"question": data.user_query}, thread)
     return {"answer": result["answer"]}
 
 
