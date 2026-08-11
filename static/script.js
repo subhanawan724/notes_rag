@@ -1,3 +1,8 @@
+let threadId = localStorage.getItem("thread_id");
+if (!threadId) {
+  threadId = crypto.randomUUID();
+  localStorage.setItem("thread_id", threadId);
+}
 const askBtn = document.getElementById("ask-btn");
 const queryInput = document.getElementById("query");
 const answerBox = document.getElementById("answer-box");
@@ -11,7 +16,7 @@ askBtn.addEventListener("click", async () => {
   const response = await fetch("/question", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ user_query: userQuery })
+    body: JSON.stringify({ user_query: userQuery, thread_id: threadId })
   });
 
   const data = await response.json();
