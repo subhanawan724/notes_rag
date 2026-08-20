@@ -5,23 +5,27 @@ body {
   background: #0a0e12;
   color: #e8ecef;
 }
-h1 { color: #5eead4; }  /* teal, gold ki jagah */
-.subtitle { color: #94a3b8; }
+h1 { 
+  color: #a78bfa; 
+}
+.subtitle { 
+  color: #94a3b8; 
+}
 
 .bubble.user {
-  background: #5eead4;
+  background: #a78bfa;
   color: #0a0e12;
 }
 .bubble.bot {
-  background: rgba(94, 234, 212, 0.06);
-  border: 1px solid rgba(94, 234, 212, 0.15);
+  background: rgba(167, 139, 250, 0.06);
+  border: 1px solid rgba(167, 139, 250, 0.15);
 }
 #ask-btn {
-  background: #5eead4;
+  background: #a78bfa;
   color: #0a0e12;
 }
 #query {
-  border: 1px solid rgba(94, 234, 212, 0.2);
+  border: 1px solid rgba(167, 139, 250, 0.2);
 }
 
 .aurora {
@@ -33,16 +37,24 @@ h1 { color: #5eead4; }  /* teal, gold ki jagah */
   pointer-events: none;
 }
 .aurora-1 {
-  width: 40vw; height: 40vw;
-  top: -10vw; left: -10vw;
-  background: radial-gradient(circle, #5eead4, transparent 65%);
+  width: 40vw; 
+  height: 40vw;
+  top: -10vw; 
+  left: -10vw;
+  background: radial-gradient(circle, #a78bfa, transparent 65%);
   animation: drift1 30s ease-in-out infinite;
 }
 .aurora-2 {
-  width: 35vw; height: 35vw;
-  bottom: -10vw; right: -10vw;
+  width: 35vw; 
+  height: 35vw;
+  bottom: -10vw; 
+  right: -10vw;
   background: radial-gradient(circle, #a78bfa, transparent 65%);
   animation: drift2 36s ease-in-out infinite;
 }
-@keyframes drift1 { 50% { transform: translate(5vw, 6vw); } }
-@keyframes drift2 { 50% { transform: translate(-4vw, -5vw); } }
+@keyframes drift1 { 
+  50% { transform: translate(5vw, 6vw); } 
+}
+@keyframes drift2 { 
+  50% { transform: translate(-4vw, -5vw); } 
+}
