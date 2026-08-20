@@ -1,85 +1,25 @@
 * {
   box-sizing: border-box;
 }
-
 body {
-  margin: 0;
-  background: #05060a;
-  color: #f2efe6;
-  font-family: -apple-system, sans-serif;
-  min-height: 100vh;
+  background: #0a0e12;
+  color: #e8ecef;
 }
+h1 { color: #5eead4; }  /* teal, gold ki jagah */
+.subtitle { color: #94a3b8; }
 
-.app {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+.bubble.user {
+  background: #5eead4;
+  color: #0a0e12;
 }
-
-h1 {
-  text-align: center;
-  color: #e8b75c;
-  font-size: 32px;
-  margin-bottom: 8px;
+.bubble.bot {
+  background: rgba(94, 234, 212, 0.06);
+  border: 1px solid rgba(94, 234, 212, 0.15);
 }
-
-.subtitle {
-  text-align: center;
-  color: #9c9bb5;
-  font-size: 14px;
-  margin-bottom: 30px;
-}
-
-.search-row {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-#query {
-  flex: 1;
-  padding: 12px 16px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(255,255,255,0.05);
-  color: #f2efe6;
-  font-size: 15px;
-  outline: none;
-}
-
 #ask-btn {
-  padding: 12px 24px;
-  border-radius: 10px;
-  border: none;
-  background: #e8b75c;
-  color: #201404;
-  font-weight: 600;
-  cursor: pointer;
+  background: #5eead4;
+  color: #0a0e12;
 }
-#ask-btn:hover { opacity: 0.9; }
-
-#answer-box {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  padding: 20px;
-  line-height: 1.6;
-  font-size: 15px;
-}
-
-#answer-box pre {
-  border-radius: 10px;
-  padding: 14px !important;
-  overflow-x: auto;
-}
-
-#answer-box code {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-}
-
-#answer-box p code {
-  background: rgba(255,255,255,0.1);
-  padding: 2px 6px;
-  border-radius: 4px;
+#query {
+  border: 1px solid rgba(94, 234, 212, 0.2);
 }
